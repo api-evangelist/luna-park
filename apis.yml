@@ -1,7 +1,25 @@
 aid: luna-park
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/luna-park.png
 name: Luna Park
-description: 'Luna Park is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the enrichment pipeline.'
+description: 'Luna Park is a consumer-sector company surfaced as a portfolio company
+  of GV (Google Ventures) and added to the API Evangelist network. Its registered
+  domain lunapark.com now redirects (HTTP 301) to meetquinn.ai — Quinn, described
+  on-site as an AI training platform focused on "operational readiness for the trades."
+  As of this enrichment pass the company publishes a minimal marketing landing page
+  with no public developer portal, API documentation, OpenAPI specification, or other
+  machine-readable API surface. Domain-security posture was probed live: TLS 1.3 with
+  SPF and DMARC (quarantine) present; no HSTS, DNSSEC, or CAA records.'
 url: https://raw.githubusercontent.com/api-evangelist/luna-park/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +27,21 @@ x-backed-by:
 - gv
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-rebrand:
+  redirects-to: https://meetquinn.ai/
+  brand: Quinn
+  note: lunapark.com returns HTTP 301 to meetquinn.ai
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Consumer
+- GV
+- Portfolio
+- AI
+- Trades
+- Training
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/luna-park-domain-security.yml
 - type: Website
   url: https://lunapark.com
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
